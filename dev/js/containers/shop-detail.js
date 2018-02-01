@@ -9,7 +9,7 @@ class ShopDetail extends Component {
     render() {
         console.log(this.props.shop);
         if (!this.props.shop) {
-            return (<div>Select a shop...</div>);
+            return (<div>test ssssssaaa...</div>);
         }
         return (
             <div>
