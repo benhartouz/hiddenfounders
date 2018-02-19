@@ -1,7 +1,7 @@
 
-# Web Coding Challenge React/Redux/Nodejs(Express)/MongoDB 
+# Web Coding Challenge React/Nodejs(Express)/MongoDB 
 
-Full-Stack JS Coding Challenge using React/Redux/Nodejs(Express)/MongoDB.
+Full-Stack JS Coding Challenge using React/Nodejs(Express)/MongoDB.
 
 ## Getting Started
 
