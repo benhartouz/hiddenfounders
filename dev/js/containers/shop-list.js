@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {selectIem} from '../actions/index'
+import {selectIem} from '../actions/index';
+import Shop from '../components/Shop';
 
 
 class ShopList extends Component {
@@ -9,21 +10,16 @@ class ShopList extends Component {
     renderList() {
         return this.props.shops.map((shop) => {
             return (
-                <li
-                    key={shop.id}
-                    onClick={() => this.props.selectShop(shop)}
-                >
-                    {shop.name} 
-                </li>
+                <Shop key={shop.id} name={shop.name} />
             );
         });
     }
 
     render() {
         return (
-            <ul>
+            <div id="list_shop">
                 {this.renderList()}
-            </ul>
+            </div>
         );
     }
 
@@ -37,12 +33,6 @@ function mapStateToProps(state) {
     };
 }
 
-// Get actions and pass them as props to to shopList
-//      > now shopList has this.props.selectShop
-function matchDispatchToProps(dispatch){
-    return bindActionCreators({selectShop: selectIem}, dispatch);
-}
-
 // We don't want to return the plain shopList (component) anymore, we want to return the smart Container
 //      > shopList is now aware of state and actions
-export default connect(mapStateToProps, matchDispatchToProps)(ShopList);
+export default connect(mapStateToProps)(ShopList);
